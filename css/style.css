@@ -1,0 +1,92 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/* Can use these vars in oother stylesheets as long as I link to this one first */
+:root {
+  --prim-color: rgba(13,110,139,0.85);
+  --sec-color: rgba(229,148,0,0.9);
+  --over-color: rgba(24,39,51,0.9);
+  --menu-speed: 0.75s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+/* Utility Classes */
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+
+.showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--prim-color);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  border: white solid 1px;
+  margin: 1rem;
+  /* for hover state below */
+  transition: all 1s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  background: var(--sec-color);
+}
+
+
+/* Showcase header ------- */
+
+#showcase {
+  background: var(--prim-color);
+  height: 100vh;
+  color: #fff;
+  /* position is relative so that the overlay can be absolute over the top using :before pseudo selector  - this uses the first 'relative' container - want this to be this NOT the body!  */
+  position: relative;
+}
+
+#showcase:before {
+  /* Need to put content in for :before - leave it empty */
+  content: '';
+  background: url('../img/matt-hardy-6ArTTluciuA.jpg') no-repeat 
+  center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Push it behind */
+  z-index: -1;
+}
+
+#showcase h1 {
+  font-size: 4rem;
+}

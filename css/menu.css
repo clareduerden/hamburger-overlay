@@ -1,0 +1,64 @@
+/* Fix the menu-wrapper so that it doesn't move and put it over the top */
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Make the checkbox bigger, psoition it top/left, bring it to the top and make it invisible */
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Checkbox must sit on top so it can be clicked */
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  /* Make it invisible */
+  opacity: 0;
+}
+
+/* Position the hamburger top/left, push it just behind checkbox, style it */
+.menu-wrap .hamburger {
+  position: relative;
+  top: 0;
+  left: 0;
+  /* sits just under the checkbox */
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 0.8rem;
+  background: var(--prim-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Create the middle Hamburger Line using the inner div */
+.menu-wrap .hamburger > div {
+  position: relative;
+  /* flex: none; */
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  /* display: flex; */
+}
+
+/* Hamburger Lines - create top and bottom lines with pseudo selectorss */
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+.menu-wrap .hamburger > div::after {
+  top: 10px;
+}
+
