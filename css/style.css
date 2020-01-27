@@ -3,9 +3,9 @@
 
 /* Can use these vars in oother stylesheets as long as this file is linked first */
 :root {
-  --prim-color: rgba(13,110,139,0.85);
+  --prim-color: rgba(13,110,139,0.8);
   --sec-color: rgba(229,148,0,0.9);
-  --over-color: rgba(24,39,51,0.9);
+  --over-color: rgba(24,39,51,0.92);
   --menu-speed: 0.75s;
 }
 
