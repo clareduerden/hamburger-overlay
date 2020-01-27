@@ -1,7 +1,7 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-/* Can use these vars in oother stylesheets as long as I link to this one first */
+/* Can use these vars in oother stylesheets as long as this file is linked first */
 :root {
   --prim-color: rgba(13,110,139,0.85);
   --sec-color: rgba(229,148,0,0.9);
@@ -69,7 +69,7 @@ body {
   background: var(--prim-color);
   height: 100vh;
   color: #fff;
-  /* position is relative so that the overlay can be absolute over the top using :before pseudo selector  - this uses the first 'relative' container - want this to be this NOT the body!  */
+  /* position is relative so that the overlay can be absolute over the top using :before pseudo selector  - this uses the first 'relative' container - want it to be this NOT the body  */
   position: relative;
 }
 
